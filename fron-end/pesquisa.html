@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<style>
+.job-listings {
+  display: flex;
+  margin: 22px 0 0;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 65px;
+}
+
+.filters-section {
+  align-self: start;
+}
+
+.filters-header {
+  display: flex;
+  gap: 15px;
+  color: rgb(20, 60, 60);
+  letter-spacing: 0.5px;
+  font: 900 24px/4 Lovelo, sans-serif;
+}
+
+.filter-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 24px;
+}
+
+.filter-title {
+  margin: auto 0;
+}
+
+.model-section {
+  margin-top: 46px;
+}
+
+.section-title {
+  color: rgb(20, 60, 60);
+  letter-spacing: 0.5px;
+  font: 900 20px/5 Lovelo, sans-serif;
+}
+
+.filter-options {
+  display: flex;
+  margin-top: 21px;
+  flex-direction: column;
+  gap: 11px;
+  padding: 0 20px;
+}
+
+.filter-option {
+  display: flex;
+  gap: 4px;
+  color: rgb(20, 60, 60);
+  letter-spacing: 0.5px;
+  font: 900 20px/5 Lovelo, sans-serif;
+}
+
+.option-text {
+  margin: auto 0;
+}
+
+.location-section {
+  margin-top: 21px;
+}
+
+.date-section {
+  margin-top: 19px;
+}
+
+.job-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  width: 84%;
+  margin-left: 20px;
+}
+
+.job-row {
+  display: flex;
+  gap: 20px;
+}
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.company-logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 80px;
+  align-self: center;
+  z-index: 10;
+  margin-top: 61px;
+}
+
+.card-content {
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  margin-top: -141px;
+  padding: 32px;
+  border: 1px solid rgb(217, 217, 217);
+}
+
+.job-title {
+  color: rgb(30, 30, 30);
+  text-align: center;
+  letter-spacing: -0.48px;
+  font: 600 24px/1.2 Inter, sans-serif;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  color: var(--sds-color-text-default-secondary);
+  font: var(--sds-typography-body-font-weight-regular) var(--sds-typography-body-size-medium)/1.4 var(--sds-typography-body-font-family);
+}
+
+.apply-button {
+  border-radius: 8px;
+  background-color: rgb(44, 44, 44);
+  color: var(--sds-color-text-brand-on-brand);
+  padding: 12px;
+  margin-top: 24px;
+  text-align: center;
+  font: var(--sds-typography-body-font-weight-regular) var(--sds-typography-body-size-medium)/1 var(--sds-typography-body-font-family);
+  border: 1px solid rgb(44, 44, 44);
+}
+
+@media (max-width: 991px) {
+  .job-listings {
+    padding: 0 20px;
+  }
+  
+  .job-cards-container {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  
+  .job-row {
+    flex-direction: column;
+  }
+  
+  .job-card {
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+}
+</style>
+<body>
+<div class="job-listings">
+  <section class="filters-section">
+    <div class="filters-header">
+      <h2 class="filter-title">filtros</h2>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f4aaada6b11c480df9faffa4b81e2a6c3af9ea524492ad740fda327e9c886b74?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+    </div>
+    
+    <section class="model-section">
+      <h3 class="section-title">modelo</h3>
+      <div class="filter-options">
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">remoto</span>
+        </div>
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">híbrido</span>
+        </div>
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">presencial</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h3 class="section-title">localidade</h3>
+      <div class="filter-options">
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">São Caetano</span>
+        </div>
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">Brasília</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="date-section">
+      <h3 class="section-title">data de publicação</h3>
+      <div class="filter-options">
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">esse mês</span>
+        </div>
+        <div class="filter-option" tabindex="0" role="button">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25417a98348375680b7638151d6c77edb3f109fed206d759955b9d2f04af3ff5?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="" class="filter-icon" />
+          <span class="option-text">essa semana</span>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div class="job-cards-container">
+    <div class="job-row">
+      <article class="job-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/771158dd728204841df6301c80b8fb984a6543898c134e023f9d4025482cc910?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="Hospital São Camilo logo" class="company-logo" />
+        <div class="card-content">
+          <h2 class="job-title">Estágio de Informática em Saúde - TI</h2>
+          <div class="job-details">
+            <span>Hospital São Camilo</span>
+            <span>3° ao 4° Semestre</span>
+            <span>São Paulo</span>
+            <span>Presencial</span>
+            <span>Publicada há 5 dias</span>
+          </div>
+          <a href="#" class="apply-button" tabindex="0">vagas.com</a>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/278891756f3b867ace64e6943a837d27960e84c1d021806ad73b487cc5863065?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="VG Consultoria logo" class="company-logo" />
+        <div class="card-content">
+          <h2 class="job-title">Estágio em TI</h2>
+          <div class="job-details">
+            <span>VG Consultoria</span>
+            <span>3° ao 7° Semestre</span>
+            <span>São Caetano do Sul</span>
+            <span>Híbrido</span>
+            <span>Publicada há 19 dias</span>
+          </div>
+          <a href="#" class="apply-button" tabindex="0">Linkedln</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="job-row">
+      <article class="job-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/127bc4f3a5d51bcdebf312e3a5fc72354def23d1caf10a0c3b2992e38c575533?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="Cebrace logo" class="company-logo" />
+        <div class="card-content">
+          <h2 class="job-title">Estágio TI</h2>
+          <div class="job-details">
+            <span>Cebrace</span>
+            <span>2° ao 6° Semestre</span>
+            <span>Brasília - DF</span>
+            <span>Remoto</span>
+            <span>Publicada hoje</span>
+          </div>
+          <a href="#" class="apply-button" tabindex="0">Talent.com</a>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1736b896f6a2fb3648e06459d084d787f58821cdd3161b074ac110d9f854a1bb?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="IBM Brasil logo" class="company-logo" />
+        <div class="card-content">
+          <h2 class="job-title">Estágio em Ciências da Computação</h2>
+          <div class="job-details">
+            <span>IBM Brasil</span>
+            <span>3° ao 5° Semestre</span>
+            <span>Campinas - SP</span>
+            <span>Presencial</span>
+            <span>Publicada há 40 dias</span>
+          </div>
+          <a href="#" class="apply-button" tabindex="0">vagasflix.com</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="job-row">
+      <article class="job-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a406b115a26537b994532e9c629151740e2d2491402c0f2e4543015d9e9afc3?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="Foursys logo" class="company-logo" />
+        <div class="card-content">
+          <h2 class="job-title">Estagiário em Programação Mainframe</h2>
+          <div class="job-details">
+            <span>Foursys</span>
+            <span>1° ao 4° Semestre</span>
+            <span>São Paulo</span>
+            <span>Presencial</span>
+            <span>Publicada há 12 dias</span>
+          </div>
+          <a href="#" class="apply-button" tabindex="0">vagas.com</a>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd8ac9928bd1a791d15d4b25a7bbc72743300600ceaef3c27c0bff078db73576?placeholderIfAbsent=true&apiKey=6410158f376e41d0b6c70af709161809" alt="Colégio Santa Maria logo" class="company-logo" />
+        <div class="card-content">
+          <h2 class="job-title">Estágio de Informática</h2>
+          <div class="job-details">
+            <span>Colégio Santa Maria</span>
+            <span>3° ao 4° Semestre</span>
+            <span>São Caetano do Sul</span>
+            <span>Presencial</span>
+            <span>Publicada há 5 dias</span>
+          </div>
+          <a href="#" class="apply-button" tabindex="0">vagas.com</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+</body>
+</html>
